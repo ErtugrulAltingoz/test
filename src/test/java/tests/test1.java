@@ -14,7 +14,10 @@ public class test1 {
         WebDriver driver = new ChromeDriver();
         driver.get("https://www.a101.com.tr/");
         driver.manage().window().maximize();
-        driver.findElement(By.id("CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll")).click();
+        driver.findElement(By.id("CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll")).click
+            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        driver.findElement(By.className("closePopupPersona")).click();
+            
         driver.findElement(By.xpath("//a[@title='GİYİM & AKSESUAR']")).click();
         driver.findElement(By.xpath("//a[@data-value='1565']")).click();
         Thread.sleep(3000);
